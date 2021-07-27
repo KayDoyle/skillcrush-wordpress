@@ -19,10 +19,8 @@ get_header(); ?>
 <section class="index-page">
 	<div class="main-content">
 		<?php if ( have_posts() ): ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<h3>Hello, Skillcrushers!</h3>
-				<p>This is your main index page.</p>
-				<p>The file that creates this default page is index.php.</p>
+			<?php while ( have_posts() ) : the_post(); ?>			
+					<?php get_template_part('content', get_post_format()); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
